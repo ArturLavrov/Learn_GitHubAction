@@ -29,4 +29,4 @@ jobs:
     - name: Push generated package to GitHub registry
       run: |
           cd out
-          dotnet nuget push *.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/ArturLavrov/index.json
+          dotnet nuget push *.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/ArturLavrov/Learn_GitHubAction/index.json
