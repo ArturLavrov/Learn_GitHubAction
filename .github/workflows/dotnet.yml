@@ -28,4 +28,5 @@ jobs:
           dotnet pack -c Release -o out  
     - name: Push generated package to GitHub registry
       run: |
+          cd out
           dotnet nuget push *.nupkg -k ${{ secrets.TOKEN }} -s https://nuget.pkg.github.com/ArturLavrov/index.json
